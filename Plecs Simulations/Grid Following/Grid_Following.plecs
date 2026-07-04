@@ -3,7 +3,7 @@ Plecs {
   Version       "5.0"
   CircuitModel  "ContStateSpace"
   StartTime     "0.0"
-  TimeSpan      "1.0"
+  TimeSpan      "4.0"
   Timeout       ""
   Solver        "radau"
   MaxStep       "Tsolver"
@@ -30,29 +30,24 @@ Plecs {
   FixedPointDatatypeOverride "1"
   InitializationCommands base64 "JSUgR0xPQkFMIFBBUkFNRVRFUlMg4oCUIDJMVlNJIAolI"
 "C0tLS0gVGltaW5nIC0tLS0KZiAgICAgICA9IDUwOyAgICAgICAgICAgICUgZ3JpZCBmcmVxdWVuY3"
-"kgW0h6XQpmcmVxICAgID0gZjsgICAgICAgICAgICAgJSBpdCdzIGFuIGFsaWFzIChsZWdhY3kgcmV"
-"mcykKd2cgICAgICA9IDIqcGkqZjsgICAgICAgICUgZ3JpZCBhbmd1bGFyIGZyZXF1ZW5jeSBbcmFk"
-"L3NdCkZzICAgICAgPSA0MDAwMDsgICAgICAgICAlIGNvbnRyb2wgc2FtcGxpbmcgZnJlcXVlbmN5I"
-"FtIel0KVHMgICAgICA9IDEvRnM7ICAgICAgICAgICUgY29udHJvbCBwZXJpb2QgW3NdCmZzdyAgIC"
-"AgPSA0MDAwMDsgICAgICAgICAlIHN3aXRjaGluZyBmcmVxdWVuY3kgW0h6XQpUc29sdmVyID0gVHM"
-"vMTAwOyAgICAgICAlIGZpeGVkIHNvbHZlciBzdGVwIChsZWdhY3kgcmVmKSAvIFNWTSBjYXJyaWVy"
-"IHRpY2sgW3NdCk4gICAgICAgPSAzOyAgICAgICAgICAgICAlIHBoYXNlcwoKJSAtLS0tIEdyaWQgc"
-"291cmNlIC0tLS0KVnBlYWsgPSAyMjAqc3FydCgyKTsgICAgICUgcGhhc2UgcGVhayBbVl0KVmJhc2"
-"UgPSAyMjAqc3FydCgzKTsgICAgICUgbGluZS10by1saW5lIFJNUyBiYXNlIFtWXQpoNSAgICA9IDA"
-"uMTUqVnBlYWs7ICAgICAgJSA1dGggaGFybW9uaWMgaW5qZWN0aW9uIFtWXQpoNyAgICA9IDAuMTAq"
-"VnBlYWs7ICAgICAgJSA3dGggaGFybW9uaWMgaW5qZWN0aW9uIFtWXQoKJSAtLS0tIExpbmUgKGdya"
-"WQpIGltcGVkYW5jZSwgZnJvbSBTQ1IgLyBYLVIgLS0tLQpTbm9tID0gM2UzOyAgICAgICAgICAgIC"
-"AgJSBub21pbmFsIDMtcGhhc2UgYXBwYXJlbnQgcG93ZXIgW1ZBXQpTQ1IgID0gNTA7ICAgICAgICA"
-"gICAgICAgJSBzaG9ydC1jaXJjdWl0IHJhdGlvIChzdGlmZiBncmlkKQpYUiAgID0gMTsgICAgICAg"
-"ICAgICAgICAgJSBYL1IgcmF0aW8gKGRpc3RyaWJ1dGlvbikKUmcgPSBWYmFzZV4yLyhTQ1IqU25vb"
-"SpzcXJ0KDEgKyBYUl4yKSk7ICAgJSB+MC42OCBPaG0KTGcgPSBYUipSZy93ZzsgICAgICAgICAgIC"
-"AgICAgICAgICAgICAgICAgJSB+Mi4yIG1ICgolIC0tLS0gUG93ZXIgcmVmZXJlbmNlIChtYXNrIHB"
-"hcmFtcywgZm9yIHNjcmlwdGVkIGsvUC9RIHN3ZWVwcykgLS0tLQpQX3JlZiA9IDgwMDAuMDsgIApR"
-"X3JlZiA9IDAuMDsgICAgICAKa193ZWlnaHQgPSAxLjA7ICAKaXBjX3dpZGViYW5kID0gMTsgCgolI"
-"C0tLS0gSW52ZXJ0ZXIgLyBwbGFudCAtLS0tClZkYyA9IDgwMDsgICAgICAgICAgICAgICAlIERDLW"
-"xpbmsgdm9sdGFnZSBbVl0KQ2RjID0gMmUtMzsgICAgICAgICAgICAgICUgREMtbGluayBjYXBhY2l"
-"0YW5jZSBbRl0KTGYgID0gNWUtMzsgICAgICAgICAgICAgICUgZmlsdGVyIGluZHVjdGFuY2UgW0hd"
-"ClJmICA9IDAuMTsgICAgICAgICAgICAgICAlIGZpbHRlciByZXNpc3RhbmNlIFtPaG1dCg=="
+"kgW0h6XQpmcmVxICAgID0gZjsgICAgICAgICAgICAgJSBpdCdzIGFuIGFsaWFzIChubyBsb25nZXI"
+"gdXNlZCkKd2cgICAgICA9IDIqcGkqZjsgICAgICAgICUgZ3JpZCBhbmd1bGFyIGZyZXF1ZW5jeSBb"
+"cmFkL3NdCkZzICAgICAgPSA0MDAwMDsgICAgICAgICAlIGNvbnRyb2wgc2FtcGxpbmcgZnJlcXVlb"
+"mN5IFtIel0KVHMgICAgICA9IDEvRnM7ICAgICAgICAgICUgY29udHJvbCBwZXJpb2QgW3NdCmZzdy"
+"AgICAgPSA0MDAwMDsgICAgICAgICAlIHN3aXRjaGluZyBmcmVxdWVuY3kgW0h6XQpUc29sdmVyID0"
+"gVHMvMTAwOyAgICAgICAlIGZpeGVkIHNvbHZlciBzdGVwIChsZWdhY3kgcmVmKSAvIFNWTSBjYXJy"
+"aWVyIHRpY2sgW3NdCk4gICAgICAgPSAzOyAgICAgICAgICAgICAlIHBoYXNlcwoKJSAtLS0tIEdya"
+"WQgc291cmNlIC0tLS0KVnBlYWsgPSAyMjAqc3FydCgyKTsgICAgICUgcGhhc2UgcGVhayBbVl0KVm"
+"Jhc2UgPSAyMjAqc3FydCgzKTsgICAgICUgbGluZS10by1saW5lIFJNUyBiYXNlIFtWXQpoNSAgICA"
+"9IDAuMTUqVnBlYWs7ICAgICAgJSA1dGggaGFybW9uaWMgaW5qZWN0aW9uIFtWXQpoNyAgICA9IDAu"
+"MTAqVnBlYWs7ICAgICAgJSA3dGggaGFybW9uaWMgaW5qZWN0aW9uIFtWXQoKJSAtLS0tIFBvd2VyI"
+"HJlZmVyZW5jZSAobWFzayBwYXJhbXMsIGZvciBzY3JpcHRlZCBrL1AvUSBzd2VlcHMpIC0tLS0KUF"
+"9yZWYgPSA4MDAwLjA7ICAKUV9yZWYgPSAwLjA7ICAgICAgCmtfd2VpZ2h0ID0gMS4wOyAgCmlwY19"
+"3aWRlYmFuZCA9IDE7IAoKJSAtLS0tIEludmVydGVyIC8gcGxhbnQgLS0tLQpWZGMgPSA4MDA7ICAg"
+"ICAgICAgICAgICAgJSBEQy1saW5rIHZvbHRhZ2UgW1ZdCkNkYyA9IDJlLTM7ICAgICAgICAgICAgI"
+"CAlIERDLWxpbmsgY2FwYWNpdGFuY2UgW0ZdCkxmICA9IDVlLTM7ICAgICAgICAgICAgICAlIGZpbH"
+"RlciBpbmR1Y3RhbmNlIFtIXQpSZiAgPSAwLjE7ICAgICAgICAgICAgICAgJSBmaWx0ZXIgcmVzaXN"
+"0YW5jZSBbT2htXQo="
   InitialState  "1"
   SystemState   ""
   JacobianComputation "2"
@@ -100,8 +95,8 @@ Plecs {
   }
   Schematic {
     Location      [0, 31; 1920, 1005]
-    ZoomFactor    0.873841
-    SliderPosition [0, 0]
+    ZoomFactor    0.999994
+    SliderPosition [0, 44]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -2573,7 +2568,7 @@ Plecs {
       Type          SignalDemux
       Name          "Demux"
       Show          off
-      Position      [720, 850]
+      Position      [710, 800]
       Direction     right
       Flipped       on
       LabelPosition south
@@ -2588,7 +2583,7 @@ Plecs {
       Type          From
       Name          "From43"
       Show          off
-      Position      [530, 850]
+      Position      [520, 800]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2719,7 +2714,7 @@ Plecs {
       Type          CScript
       Name          "SVM"
       Show          on
-      Position      [1620, 865]
+      Position      [1280, 805]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -2872,7 +2867,7 @@ Plecs {
       Type          SignalMux
       Name          "Mux12"
       Show          off
-      Position      [1555, 865]
+      Position      [1215, 805]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2887,7 +2882,7 @@ Plecs {
       Type          From
       Name          "From51"
       Show          off
-      Position      [1510, 875]
+      Position      [1170, 815]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2922,7 +2917,7 @@ Plecs {
       Type          From
       Name          "From52"
       Show          off
-      Position      [1510, 855]
+      Position      [1170, 795]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2957,7 +2952,7 @@ Plecs {
       Type          From
       Name          "From53"
       Show          off
-      Position      [1510, 865]
+      Position      [1170, 805]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2992,7 +2987,7 @@ Plecs {
       Type          SignalDemux
       Name          "Demux9"
       Show          off
-      Position      [1690, 865]
+      Position      [1350, 805]
       Direction     right
       Flipped       on
       LabelPosition south
@@ -3067,17 +3062,20 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [0, 24; 1920, 1047]
+      Location      [0, 31; 1920, 1071]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAeAAAAAVvw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABEAP///wAAB4AAAAOEAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABEAP///wAAB4AAAAOVAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
       HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":183,\"Labels\":[\""
 "Delta\"],\"VisualIdxs\":[3]}"
-      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      PlotPalettes  "AAAAAQAAAAMAAAABAAAAAwAAAAEC//8u4P//zMwAAAAAAAEC//8AAP///"
+"/8AAAAAAAEC//9PsP////8AAAAAAAMAAAABAAAAAAEAAAAAAQAAAAADAAAAAQAAAAEAAAABAAAAAQ"
+"AAAAEAAAABAAAAAwAAAAEAAAAAAQAAAAABAAAAAAMAAAABQAAAAAAAAAAAAAABQAAAAAAAAAAAAAA"
+"BQAAAAAAAAAAAAAADAAAAAQEAAAABAQAAAAEB"
       Axes          "1"
       TimeRange     "0"
       ScrollingMode "1"
@@ -3226,7 +3224,7 @@ Plecs {
       Type          Goto
       Name          "Goto39"
       Show          off
-      Position      [1760, 855]
+      Position      [1420, 795]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -3261,7 +3259,7 @@ Plecs {
       Type          Goto
       Name          "Goto40"
       Show          off
-      Position      [1760, 875]
+      Position      [1420, 815]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -3301,18 +3299,20 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [0, 31; 1406, 1071]
+      Location      [0, 23; 1920, 1019]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAFgA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAABX4AAAPxAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAAB4AAAAPFAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
       HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":137,\"Labels\":[],"
 "\"VisualIdxs\":[]}"
-      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
-"AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAQAAAAEC//8u4P//zMwAAAAAAAEAAAABAAAAA"
+"AEAAAABAAAAAQAAAAEAAAABAAAAAAEAAAABQAAAAAAAAAAAAAABAAAAAQEAAAABAAAAAQAAAAEAAA"
+"ABAf//qqoAAAAAAAAAAAABAAAAAQEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAABAAAAAUAAAAAAAAA"
+"AAAAAAQAAAAEB"
       Axes          "2"
       TimeRange     "0"
       ScrollingMode "1"
@@ -3321,13 +3321,13 @@ Plecs {
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
-      ShowLegend    "1"
+      ShowLegend    "2"
       Axis {
         Name          ""
         AutoScale     1
         MinValue      0
         MaxValue      1
-        Signals       {}
+        Signals       {"Omega"}
         SignalTypes   [ ]
         Untangle      0
         KeepBaseline  off
@@ -3338,7 +3338,7 @@ Plecs {
         AutoScale     1
         MinValue      0
         MaxValue      1
-        Signals       {}
+        Signals       {"Theta"}
         SignalTypes   [ ]
         Untangle      0
         KeepBaseline  off
@@ -4151,7 +4151,7 @@ Plecs {
       Type          Goto
       Name          "Goto48"
       Show          off
-      Position      [1760, 865]
+      Position      [1420, 805]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -4341,7 +4341,7 @@ Plecs {
       Type          Goto
       Name          "Goto2"
       Show          off
-      Position      [790, 830]
+      Position      [780, 780]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -4376,7 +4376,7 @@ Plecs {
       Type          Goto
       Name          "Goto3"
       Show          off
-      Position      [790, 840]
+      Position      [780, 790]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -4411,7 +4411,7 @@ Plecs {
       Type          Goto
       Name          "Goto4"
       Show          off
-      Position      [790, 850]
+      Position      [780, 800]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -4446,7 +4446,7 @@ Plecs {
       Type          Goto
       Name          "Goto5"
       Show          off
-      Position      [790, 810]
+      Position      [780, 760]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -4481,7 +4481,7 @@ Plecs {
       Type          Goto
       Name          "Goto8"
       Show          off
-      Position      [790, 820]
+      Position      [780, 770]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -4678,7 +4678,7 @@ Plecs {
       Type          CScript
       Name          "MSOGI-PLL"
       Show          on
-      Position      [630, 850]
+      Position      [620, 800]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -4859,7 +4859,7 @@ Plecs {
       Type          From
       Name          "From92"
       Show          off
-      Position      [880, 770]
+      Position      [815, 930]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -4894,7 +4894,7 @@ Plecs {
       Type          From
       Name          "From93"
       Show          off
-      Position      [880, 780]
+      Position      [815, 940]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -4929,7 +4929,7 @@ Plecs {
       Type          From
       Name          "From94"
       Show          off
-      Position      [880, 790]
+      Position      [815, 950]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -4964,7 +4964,7 @@ Plecs {
       Type          SignalMux
       Name          "Mux19"
       Show          off
-      Position      [920, 780]
+      Position      [855, 940]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -4979,7 +4979,7 @@ Plecs {
       Type          SignalDemux
       Name          "Demux3"
       Show          off
-      Position      [1045, 780]
+      Position      [980, 940]
       Direction     right
       Flipped       on
       LabelPosition south
@@ -4994,7 +4994,7 @@ Plecs {
       Type          Goto
       Name          "Goto23"
       Show          off
-      Position      [1080, 775]
+      Position      [1015, 935]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5029,7 +5029,7 @@ Plecs {
       Type          Goto
       Name          "Goto24"
       Show          off
-      Position      [1080, 785]
+      Position      [1015, 945]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5064,7 +5064,7 @@ Plecs {
       Type          CScript
       Name          "Clarke-T"
       Show          on
-      Position      [975, 780]
+      Position      [910, 940]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -5199,7 +5199,7 @@ Plecs {
       Type          Goto
       Name          "Goto22"
       Show          off
-      Position      [790, 860]
+      Position      [780, 810]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5234,7 +5234,7 @@ Plecs {
       Type          Goto
       Name          "Goto25"
       Show          off
-      Position      [790, 870]
+      Position      [780, 820]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5269,7 +5269,7 @@ Plecs {
       Type          Goto
       Name          "Goto32"
       Show          off
-      Position      [790, 880]
+      Position      [780, 830]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5304,7 +5304,7 @@ Plecs {
       Type          SignalMux
       Name          "Mux27"
       Show          off
-      Position      [1305, 800]
+      Position      [910, 805]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5319,7 +5319,7 @@ Plecs {
       Type          SignalDemux
       Name          "Demux7"
       Show          off
-      Position      [1430, 800]
+      Position      [1035, 805]
       Direction     right
       Flipped       on
       LabelPosition south
@@ -5334,7 +5334,7 @@ Plecs {
       Type          Goto
       Name          "Goto60"
       Show          off
-      Position      [1470, 795]
+      Position      [1075, 800]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5369,7 +5369,7 @@ Plecs {
       Type          Goto
       Name          "Goto61"
       Show          off
-      Position      [1470, 805]
+      Position      [1075, 810]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5404,7 +5404,7 @@ Plecs {
       Type          CScript
       Name          "Reference_gen"
       Show          on
-      Position      [1360, 800]
+      Position      [965, 805]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -5579,7 +5579,7 @@ Plecs {
       Type          From
       Name          "From109"
       Show          off
-      Position      [1275, 775]
+      Position      [880, 780]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5614,7 +5614,7 @@ Plecs {
       Type          From
       Name          "From110"
       Show          off
-      Position      [1275, 785]
+      Position      [880, 790]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5649,7 +5649,7 @@ Plecs {
       Type          From
       Name          "From111"
       Show          off
-      Position      [1275, 795]
+      Position      [880, 800]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5684,7 +5684,7 @@ Plecs {
       Type          From
       Name          "From112"
       Show          off
-      Position      [1275, 805]
+      Position      [880, 810]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5719,7 +5719,7 @@ Plecs {
       Type          SignalMux
       Name          "Mux30"
       Show          off
-      Position      [1285, 950]
+      Position      [1210, 935]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5734,7 +5734,7 @@ Plecs {
       Type          SignalDemux
       Name          "Demux10"
       Show          off
-      Position      [1410, 950]
+      Position      [1335, 935]
       Direction     right
       Flipped       on
       LabelPosition south
@@ -5749,7 +5749,7 @@ Plecs {
       Type          Goto
       Name          "Goto68"
       Show          off
-      Position      [1475, 945]
+      Position      [1400, 930]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5784,7 +5784,7 @@ Plecs {
       Type          Goto
       Name          "Goto69"
       Show          off
-      Position      [1475, 955]
+      Position      [1400, 940]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5819,7 +5819,7 @@ Plecs {
       Type          CScript
       Name          "PCI"
       Show          on
-      Position      [1355, 950]
+      Position      [1280, 935]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -6029,7 +6029,7 @@ Plecs {
       Type          From
       Name          "From113"
       Show          off
-      Position      [1230, 920]
+      Position      [1155, 905]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6064,7 +6064,7 @@ Plecs {
       Type          From
       Name          "From114"
       Show          off
-      Position      [1230, 930]
+      Position      [1155, 915]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6099,7 +6099,7 @@ Plecs {
       Type          From
       Name          "From115"
       Show          off
-      Position      [1230, 940]
+      Position      [1155, 925]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6134,7 +6134,7 @@ Plecs {
       Type          From
       Name          "From121"
       Show          off
-      Position      [1230, 950]
+      Position      [1155, 935]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6169,7 +6169,7 @@ Plecs {
       Type          From
       Name          "From122"
       Show          off
-      Position      [1230, 960]
+      Position      [1155, 945]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6204,7 +6204,7 @@ Plecs {
       Type          From
       Name          "From123"
       Show          off
-      Position      [1230, 970]
+      Position      [1155, 955]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6239,7 +6239,7 @@ Plecs {
       Type          From
       Name          "From124"
       Show          off
-      Position      [1230, 980]
+      Position      [1155, 965]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6885,15 +6885,15 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [0, 24; 1920, 1047]
+      Location      [0, 24; 1920, 1064]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAKFAAAD1/wCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAA0AAAAeAAAAFgA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAANAAAA9cAAABiAP///wAAAAMAAAd+AAAAc/w"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQCAAAAAAAAA+4AAAd+AAAARAAAB4AAAAPgAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQCAAAAAAAAA+4AAAd+AAAARAAAB4AAAAPxAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":136,\"Labels\":[\""
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":144,\"Labels\":[\""
 "Delta\",\"Mean\",\"RMS\"],\"VisualIdxs\":[3,8,9]}"
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAgAAAAEC//8u4P//zMwAAAAAAAEC//8AAP///"
 "/8AAAAAAAIAAAABAAAAAAEAAAAAAgAAAAEAAAABAAAAAQAAAAEAAAACAAAAAQEAAAABAAAAAAIAAA"
@@ -7786,7 +7786,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "SwitchState"
-        Value         "1"
+        Value         "2"
         Show          off
       }
     }
@@ -8054,7 +8054,7 @@ Plecs {
       Type          Goto
       Name          "Goto33"
       Show          off
-      Position      [790, 890]
+      Position      [780, 840]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -8089,7 +8089,7 @@ Plecs {
       Type          From
       Name          "From95"
       Show          off
-      Position      [540, 990]
+      Position      [530, 940]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -8124,7 +8124,7 @@ Plecs {
       Type          SignalDemux
       Name          "Demux5"
       Show          off
-      Position      [695, 990]
+      Position      [685, 940]
       Direction     right
       Flipped       on
       LabelPosition south
@@ -8139,7 +8139,7 @@ Plecs {
       Type          Goto
       Name          "Goto29"
       Show          off
-      Position      [730, 995]
+      Position      [720, 945]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -8174,7 +8174,7 @@ Plecs {
       Type          CScript
       Name          "SM"
       Show          on
-      Position      [625, 990]
+      Position      [615, 940]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -8306,7 +8306,7 @@ Plecs {
       Type          Goto
       Name          "Goto30"
       Show          off
-      Position      [730, 985]
+      Position      [720, 935]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -9353,7 +9353,7 @@ Plecs {
       Type          From
       Name          "From142"
       Show          off
-      Position      [1275, 815]
+      Position      [880, 820]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -9388,7 +9388,7 @@ Plecs {
       Type          From
       Name          "From143"
       Show          off
-      Position      [1275, 825]
+      Position      [880, 830]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -10801,9 +10801,9 @@ Plecs {
       DstTerminal   1
     }
     Annotation {
-      Name          "<html><body>\n<p><span style=\" font-weight:600;\">Distur"
-"bed Grid generation signals</span></p></body></html>"
-      Position      [165, 245]
+      Name          "<html><body>\n<p><span style=\" font-weight:600; color:#a"
+"a0000;\">Disturbed Grid generation signals</span></p></body></html>"
+      Position      [165, 250]
     } 
     RectangleAnnotation {
       Position     [240, 575]
@@ -10821,7 +10821,7 @@ Plecs {
       Position      [145, 280]
     } 
     RectangleAnnotation {
-      Position     [640, 845]
+      Position     [630, 795]
       Width        200
       Height       110
       CornerRadius 10
@@ -10835,10 +10835,10 @@ Plecs {
       Name          "<html><body>\n<p align=\"center\"><span style=\" font-wei"
 "ght:700;\">MSOGI-PLL (unbalanced/</span></p>\n<p align=\"center\"><span style"
 "=\" font-weight:700;\">disturbed):</span></p></body></html>"
-      Position      [630, 815]
+      Position      [620, 765]
     } 
     RectangleAnnotation {
-      Position     [1625, 860]
+      Position     [1285, 800]
       Width        160
       Height       110
       CornerRadius 10
@@ -10852,10 +10852,10 @@ Plecs {
       Name          "<html><body>\n<p align=\"center\"><span style=\" font-wei"
 "ght:700;\">Space Vector </span></p>\n<p align=\"center\"><span style=\" font-"
 "weight:700;\">Modulation (SVM)</span></p></body></html>"
-      Position      [1620, 830]
+      Position      [1280, 770]
     } 
     RectangleAnnotation {
-      Position     [980, 770]
+      Position     [915, 930]
       Width        160
       Height       90
       CornerRadius 10
@@ -10868,7 +10868,7 @@ Plecs {
     Annotation {
       Name          "<html><body>\n<p align=\"center\"><span style=\" font-wei"
 "ght:700;\">Clarke Transform</span></p></body></html>"
-      Position      [980, 750]
+      Position      [915, 910]
     } 
     RectangleAnnotation {
       Position     [960, 555]
@@ -10882,9 +10882,9 @@ Plecs {
       BrushAlpha   0
     } 
     RectangleAnnotation {
-      Position     [1140, 880]
-      Width        1340
-      Height       360
+      Position     [960, 860]
+      Width        1000
+      Height       300
       CornerRadius 9
       Thickness    3
       PenColor     4294901760
@@ -10904,22 +10904,22 @@ Plecs {
       BrushAlpha   0
     } 
     Annotation {
-      Name          "<html><body>\n<p><span style=\" font-weight:600;\">Analog"
-" implementation</span></p></body></html>"
+      Name          "<html><body>\n<p><span style=\" font-weight:600; color:#a"
+"a0000;\">Analog implementation</span></p></body></html>"
       Position      [530, 410]
     } 
     Annotation {
-      Name          "<html><body>\n<p><span style=\" font-weight:600;\">C-Modu"
-"les</span></p></body></html>"
-      Position      [515, 735]
+      Name          "<html><body>\n<p><span style=\" font-weight:600; color:#a"
+"a0000;\">C-Modules</span></p></body></html>"
+      Position      [500, 700]
     } 
     Annotation {
-      Name          "<html><body>\n<p><span style=\" font-weight:600;\">Monito"
-"ring</span></p></body></html>"
+      Name          "<html><body>\n<p><span style=\" font-weight:600; color:#a"
+"a0000;\">Monitoring</span></p></body></html>"
       Position      [500, 200]
     } 
     RectangleAnnotation {
-      Position     [1365, 800]
+      Position     [970, 805]
       Width        160
       Height       90
       CornerRadius 10
@@ -10932,10 +10932,10 @@ Plecs {
     Annotation {
       Name          "<html><body>\n<p align=\"center\"><span style=\" font-wei"
 "ght:700;\">Reference_Gen</span></p></body></html>"
-      Position      [1365, 775]
+      Position      [970, 780]
     } 
     RectangleAnnotation {
-      Position     [1360, 945]
+      Position     [1285, 930]
       Width        190
       Height       100
       CornerRadius 10
@@ -10949,7 +10949,7 @@ Plecs {
       Name          "<html><body>\n<p align=\"center\"><span style=\" font-wei"
 "ght:700;\">Proportional Complex </span></p>\n<p align=\"center\"><span style="
 "\" font-weight:700;\">Integrator (PCI)</span></p></body></html>"
-      Position      [1365, 920]
+      Position      [1290, 905]
     } 
     RectangleAnnotation {
       Position     [1200, 285]
@@ -10963,8 +10963,9 @@ Plecs {
       BrushAlpha   0
     } 
     Annotation {
-      Name          "<html><body>\n<p><span style=\" font-weight:600;\">Switch"
-"ing signals (MCU have precise PWM control)</span></p></body></html>"
+      Name          "<html><body>\n<p><span style=\" font-weight:600; color:#a"
+"a0000;\">Switching signals (MCU have precise PWM control)</span></p></body></"
+"html>"
       Position      [1080, 155]
     } 
     RectangleAnnotation {
@@ -10973,18 +10974,18 @@ Plecs {
       Height       250
       CornerRadius 9
       Thickness    3
-      PenColor     4283826175
+      PenColor     4294901887
       PenAlpha     1
       BrushColor   43520
       BrushAlpha   0
     } 
     Annotation {
-      Name          "<html><body>\n<p><span style=\" font-weight:600;\">Power "
-"Monitoring</span></p></body></html>"
+      Name          "<html><body>\n<p><span style=\" font-weight:600; color:#a"
+"a0000;\">Power calculation</span></p></body></html>"
       Position      [1540, 420]
     } 
     RectangleAnnotation {
-      Position     [630, 980]
+      Position     [620, 930]
       Width        160
       Height       90
       CornerRadius 10
@@ -10997,7 +10998,7 @@ Plecs {
     Annotation {
       Name          "<html><body>\n<p align=\"center\"><span style=\" font-wei"
 "ght:700;\">Startup_Sequencer</span></p></body></html>"
-      Position      [630, 960]
+      Position      [620, 910]
     } 
   }
   Script {

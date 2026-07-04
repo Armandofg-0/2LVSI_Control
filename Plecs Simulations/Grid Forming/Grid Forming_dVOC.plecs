@@ -1,5 +1,5 @@
 Plecs {
-  Name          "dVOC_OscillatorCore_Test"
+  Name          "Grid Forming_dVOC"
   Version       "5.0"
   CircuitModel  "ContStateSpace"
   StartTime     "0.0"
@@ -28,29 +28,27 @@ Plecs {
   AlgebraicLoopWithStateMachineMsg "3"
   AssertionAction "1"
   FixedPointDatatypeOverride "1"
-  InitializationCommands "phi = pi/2; ki = 30;\n%% Grid Scenery\nXR = 10;\nSCR"
-" = 3; \n\n%% Grid.\nVbaseRMS = 110e3;\nVbasePeak = VbaseRMS*sqrt(2);\nVbaseFN"
-"Peak = VbaseRMS*sqrt(2)/(sqrt(3));\nfg = 50;\nwg = 2*pi*50;\n\n%% Filter. \nL"
-"F1 = 53.33e-3;\nLF2 = 5.33e-3;\nCF = 1.2015e-6;\nfr = sqrt((LF1+LF2)/(CF*LF1*"
-"LF2))/(2*pi);\nRd = 13; % para minimizar el THD. \nRi = 0.5;\n\n%% Inverter. "
-"\nVdc = 500e3;\nfsw = 12.5e3;\nSnom = 100e6; \nIbaseRMS = Snom/(sqrt(3)*Vbase"
-"RMS); \nIbasePeak = IbaseRMS*sqrt(2); \nZbase = VbaseRMS*VbaseRMS/Snom; \n\n%"
-"% Grid Impedance.\nRg = VbaseRMS^2 / (SCR * Snom * sqrt(1+XR^2));\nLg = XR*Rg"
-"/(2*pi*fg);\n\n%% Primary Loop. \nfp = 10;\n\n%% Voltage Profile Management. "
-"\n\n\n%% ===== dVOC nucleo (por unidad) =====\n\nxi = 100;\n\nVref = 1;\n\nkv"
-" = 1;\n\nCosc = 1;\n\nLosc = 1/wg^2;\n\neps = sqrt(Losc/Cosc);\n\nvc0 = 1e-3;"
-"\n\n%% ===== Interfaz fisica =====\n\nKv_out = VbaseFNPeak/sqrt(2);\n\nInorm "
-"= IbasePeak;\n\nKgamma = 2/3;\n\n%% ===== Cargas =====\n\nPload1 = 30e6;\n\nR"
-"load1 = VbaseRMS^2/Pload1;\n\nPload2 = 20e6;\n\nRload2 = VbaseRMS^2/Pload2;\n"
-"\n%% ===== Cronograma de escenarios (s) =====\n\ngrid_ini = 0;\n\nt_en = 0;\n"
-"\nt_loadon = 0.6; t_loadoff = 1.2;\n\nt_gridon = 2.0; t_gridoff = 7.2;\n\nPst"
-"ar_cmd = 30e6; tP_step = 2.8;\n\nQstar_cmd = 10e6; tQ_step = 3.8; tQ_off = 6."
-"8;\n\nt_sag = 4.6; dur_sag = 0.4; V_sag = 0.8;\n\nt_freq = 5.6; df_grid = -0."
-"2;\n\nt_phase = 6.2; dur_phase = 0.4; ph_jump = 10*pi/180;\n\n%% ===== Pre-si"
-"ncronizacion =====\npresync_en = 1;\nt_presync = 1.4;\nksync_gain = 10;\nKsyn"
-"c = ksync_gain*Inorm/VbaseFNPeak;\n\n%% ===== Resistencia virtual (amortiguam"
-"iento) =====\nRv_damp = 0.05*Zbase;\n\n%% ===== Lazo integral Q->V (toggle) ="
-"====\nq_en = 1;\nKqv = 1e-6;\n\n"
+  InitializationCommands "phi = pi/2;\nki = 30;\n\n%% Grid scenario\nXR = 10;"
+"\nSCR = 3;\n\n%% Grid\nVbaseRMS = 110e3;\nVbasePeak = VbaseRMS*sqrt(2);\nVbas"
+"eFNPeak = VbaseRMS*sqrt(2)/sqrt(3);\nfg = 50;\nwg = 2*pi*fg;\n\n%% Filter\nLF"
+"1 = 53.33e-3;\nLF2 = 5.33e-3;\nCF = 1.2015e-6;\nfr = sqrt((LF1+LF2)/(CF*LF1*L"
+"F2))/(2*pi);\nRd = 13;      % Selected to minimize current THD\nRi = 0.5;\n\n"
+"%% Inverter\nVdc = 500e3;\nfsw = 12.5e3;\nSnom = 100e6;\n\nIbaseRMS = Snom/(s"
+"qrt(3)*VbaseRMS);\nIbasePeak = IbaseRMS*sqrt(2);\nZbase = VbaseRMS^2/Snom;\n"
+"\n%% Grid impedance\nRg = VbaseRMS^2/(SCR*Snom*sqrt(1+XR^2));\nLg = XR*Rg/(2*"
+"pi*fg);\n\n%% Primary control loop\nfp = 10;\n\n%% Voltage profile management"
+"\n\n%% dVOC parameters (per-unit)\nxi = 100;\n\nVref = 1;\nkv = 1;\n\nCosc = "
+"1;\nLosc = 1/wg^2;\n\neps = sqrt(Losc/Cosc);\n\nvc0 = 1e-3;\n\n%% Physical in"
+"terface\nKv_out = VbaseFNPeak/sqrt(2);\n\nInorm = IbasePeak;\n\nKgamma = 2/3;"
+"\n\n%% Loads\nPload1 = 30e6;\nRload1 = VbaseRMS^2/Pload1;\n\nPload2 = 20e6;\n"
+"Rload2 = VbaseRMS^2/Pload2;\n\n%% Simulation timeline\ngrid_ini = 0;\n\nt_en "
+"= 0;\n\nt_loadon = 0.6;\nt_loadoff = 1.2;\n\nt_gridon = 2.0;\nt_gridoff = 7.2"
+";\n\nPstar_cmd = 30e6;\ntP_step = 2.8;\n\nQstar_cmd = 10e6;\ntQ_step = 3.8;\n"
+"tQ_off = 6.8;\n\nt_sag = 4.6;\ndur_sag = 0.4;\nV_sag = 0.8;\n\nt_freq = 5.6;"
+"\ndf_grid = -0.2;\n\nt_phase = 6.2;\ndur_phase = 0.4;\nph_jump = 10*pi/180;\n"
+"\n%% Pre-synchronization\npresync_en = 1;\nt_presync = 1.4;\nksync_gain = 10;"
+"\nKsync = ksync_gain*Inorm/VbaseFNPeak;\n\n%% Virtual resistance (damping)\nR"
+"v_damp = 0.05*Zbase;\n\n%% Integral Q-to-V loop\nq_en = 1;\nKqv = 1e-6;"
   InitialState  "1"
   SystemState   ""
   JacobianComputation "2"
@@ -94,7 +92,7 @@ Plecs {
   IncompatibleInitialConditionMsg "2"
   Schematic {
     Location      [0, 31; 1920, 1005]
-    ZoomFactor    0.524307
+    ZoomFactor    0.524308
     SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
@@ -999,11 +997,11 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [0, 24; 1920, 1047]
+      Location      [0, 24; 1920, 1056]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAeAAAAAiPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAAB4AAAABEAP///wAAB4AAAAPgAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAAB4AAAABEAP///wAAB4AAAAPpAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -7873,11 +7871,11 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [0, 24; 1920, 1056]
+      Location      [0, 23; 1920, 1019]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAeAAAAAiPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAAB4AAAABEAP///wAAB4AAAAPpAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAAB4AAAABEAP///wAAB4AAAAPFAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -7969,15 +7967,15 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [0, 23; 1920, 1019]
+      Location      [0, 31; 1920, 1054]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAADAA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAeAAAAAiPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAAB4AAAABEAP///wAAB4AAAAPFAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAAB4AAAABEAP///wAAB4AAAAPgAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":199,\"Labels\":[],"
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":91,\"Labels\":[],"
 "\"VisualIdxs\":[]}"
       PlotPalettes  "AAAAAQAAAAMAAAABAAAAAwAAAAEB//8AAP//AAAAAAAAAAEC//8AAP///"
 "/8AAAAAAAEC//9PsP////8AAAAAAAMAAAABAQAAAAEAAAAAAQAAAAADAAAAAQAAAAEAAAABAAAAAQ"
@@ -8923,11 +8921,11 @@ Plecs {
       Flipped       off
       LabelPosition south
       Frame         [-15, -15; 15, 15]
-      Location      [0, 24; 1920, 1038]
+      Location      [0, 24; 1920, 1047]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAFgA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAeAAAAAiPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAAB4AAAABEAP///wAAB4AAAAPXAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAAB4AAAABEAP///wAAB4AAAAPgAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -8936,8 +8934,8 @@ Plecs {
       PlotPalettes  "AAAAAQAAAAIAAAABAAAAAwAAAAEB//8AAP//AAAAAAAAAAEC//8AAP///"
 "/8AAAAAAAEC//9PsP////8AAAAAAAMAAAABAQAAAAEAAAAAAQAAAAADAAAAAQAAAAEAAAABAAAAAw"
 "AAAAEAAAABAAAAAwAAAAEAAAAAAQEAAAABAAAAAAMAAAABQAgAAAAAAAAAAAABQAgAAAAAAAAAAAA"
-"BQAgAAAAAAAAAAAADAAAAAQEAAAABAQAAAAEBAAAAAgAAAAEAAAACAAAAAQL//y7g///MzAAAAAAA"
-"AQL//wAA/////wAAAAAAAgAAAAEAAAAAAQAAAAACAAAAAQAAAAEAAAABAAAAAwAAAAIAAAABAAAAA"
+"BQAgAAAAAAAAAAAADAAAAAQEAAAABAQAAAAEBAAAAAgAAAAEAAAACAAAAAQH//wAAAAD//wAAAAAA"
+"AQL//wAA/////wAAAAAAAgAAAAEBAAAAAQAAAAACAAAAAQAAAAEAAAABAAAAAwAAAAIAAAABAAAAA"
 "AEBAAAAAgAAAAFAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAIAAAABAQAAAAEB"
       Axes          "2"
       TimeRange     "0"
@@ -8981,7 +8979,7 @@ Plecs {
           AutoScale     1
           MinValue      0
           MaxValue      1
-          Signals       {"Pmeas", "Qmeas"}
+          Signals       {"Pmeas", "P_ref"}
           Untangle      0
           KeepBaseline  off
           BaselineValue 0
@@ -8991,7 +8989,7 @@ Plecs {
           AutoScale     1
           MinValue      0
           MaxValue      1
-          Signals       {}
+          Signals       {"Qmeas", "Q_ref"}
           Untangle      0
           KeepBaseline  off
           BaselineValue 0
@@ -10481,6 +10479,161 @@ Plecs {
       Parameter {
         Variable      "Width"
         Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Scope
+      Name          "Scope I_PCC1"
+      Show          on
+      Position      [820, 870]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Frame         [-15, -15; 15, 15]
+      Location      [0, 23; 1920, 1019]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAAFgA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGIA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABiAP///wAAAAMAAAeAAAAAiPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAAB4AAAABEAP///wAAB4AAAAPFAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":91,\"Labels\":[],"
+"\"VisualIdxs\":[]}"
+      PlotPalettes  "AAAAAQAAAAMAAAABAAAAAwAAAAEB//8AAP//AAAAAAAAAAEC//8AAP///"
+"/8AAAAAAAEC//9PsP////8AAAAAAAMAAAABAQAAAAEAAAAAAQAAAAADAAAAAQAAAAEAAAABAAAAAQ"
+"AAAAEAAAABAAAAAwAAAAEAAAAAAQAAAAABAAAAAAMAAAABQAgAAAAAAAAAAAABQAgAAAAAAAAAAAA"
+"BQAgAAAAAAAAAAAADAAAAAQEAAAABAQAAAAEBAAAAAwAAAAEAAAADAAAAAQL//y7g///MzAAAAAAA"
+"AQL//wAA/////wAAAAAAAQL//0+w/////wAAAAAAAwAAAAEAAAAAAQAAAAABAAAAAAMAAAABAAAAA"
+"QAAAAEAAAABAAAAAQAAAAEAAAADAAAAAQAAAAABAAAAAAEAAAAAAwAAAAFAAAAAAAAAAAAAAAFAAA"
+"AAAAAAAAAAAAFAAAAAAAAAAAAAAAMAAAABAQAAAAEBAAAAAQE="
+      Axes          "2"
+      TimeRange     "0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    "Time / s"
+      ShowLegend    "2"
+      Axis {
+        Name          "I_PCC (abc)"
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {"Ia", "Ib", "Ic"}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {"Va", "Vb", "Vc"}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency / Hz"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          "I_PCC (abc)"
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {"Ia", "Ib", "Ic"}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
+    Component {
+      Type          From
+      Name          "From_Ipcc_sc1"
+      Show          off
+      Position      [770, 865]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "I_PCC"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "CustomMessage"
+        Value         ""
+        Show          off
+        Evaluate      on
+      }
+      Parameter {
+        Variable      "HighlightLevel"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From_Vpcc_sc1"
+      Show          off
+      Position      [770, 875]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "V_PCC_LN"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "CustomMessage"
+        Value         ""
+        Show          off
+        Evaluate      on
+      }
+      Parameter {
+        Variable      "HighlightLevel"
+        Value         "0"
         Show          off
       }
     }
@@ -12176,6 +12329,20 @@ Plecs {
       SrcTerminal   1
       Points        [565, 920; 565, 910]
       DstComponent  "Scope P Q"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From_Ipcc_sc1"
+      SrcTerminal   1
+      DstComponent  "Scope I_PCC1"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From_Vpcc_sc1"
+      SrcTerminal   1
+      DstComponent  "Scope I_PCC1"
       DstTerminal   2
     }
     Annotation {
